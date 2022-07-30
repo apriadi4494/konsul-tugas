@@ -15,8 +15,8 @@ function mataPelajaranValidation(nilaiUNAS){
         return;
     }
 
-    let hasil = mataPelajaranCalc(mtk, bahasaIndonesia, bahasaInggris, ipa)
-    console.log(hasil);
+    let result = mataPelajaranCalc(mtk, bahasaIndonesia, bahasaInggris, ipa)
+    console.log(result);
 }
 
 //the funtion for calculating the exam scores
