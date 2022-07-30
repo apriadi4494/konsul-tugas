@@ -1,24 +1,28 @@
 //the main function for checking, validating and printing the result exam 
 
-function mataPelajaran(nilaiUNAS){
-    if(nilaiUNAS.mtk == undefined || nilaiUNAS.bahasaIndonesia == undefined || nilaiUNAS.bahasaInggris == undefined || nilaiUNAS.ipa == undefined)
+function mataPelajaranValidation(nilaiUNAS){
+
+    const {mtk,bahasaIndonesia,bahasaInggris,ipa} = nilaiUNAS;
+
+    if(mtk == undefined || bahasaIndonesia == undefined || bahasaInggris == undefined || ipa == undefined)
     {
         console.log('Tolong lengkapi nilai');
         return;
     }
-    if(typeof(nilaiUNAS.mtk) !== typeof(Number(nilaiUNAS.mtk)) || typeof(nilaiUNAS.bahasaIndonesia) !== typeof(Number(nilaiUNAS.bahasaIndonesia)) || typeof(nilaiUNAS.bahasaInggris) !== typeof(Number(nilaiUNAS.bahasaInggris)) || typeof(nilaiUNAS.ipa) !== typeof(Number(nilaiUNAS.ipa)))
+    if(isNaN(mtk)||isNaN(bahasaIndonesia)||isNaN(bahasaInggris)||isNaN(ipa))
     {
         console.log('Tolong hindari memasukkan selain angka');
         return;
     }
 
-    let hasil = mataPelajaranCalc(nilaiUNAS.mtk, nilaiUNAS.bahasaIndonesia, nilaiUNAS.bahasaInggris, nilaiUNAS.ipa)
+    let hasil = mataPelajaranCalc(mtk, bahasaIndonesia, bahasaInggris, ipa)
     console.log(hasil);
 }
 
 //the funtion for calculating the exam scores
 
 function mataPelajaranCalc(mtk, bahasaIndonesia, bahasaInggris, ipa){
+    
     let average = (mtk + bahasaIndonesia + bahasaInggris + ipa) / 4;
 
 if(mtk < 0 || bahasaIndonesia < 0 || bahasaInggris <0 || ipa < 0 || mtk > 100 || bahasaIndonesia >100 || bahasaInggris >100 || ipa >100) return `Tolong masukkan setiap nilai hanya dalam interval 0 hingga 100 saja!`;
@@ -46,12 +50,4 @@ const nilaiUn= {
 
 //the callback for main function 
 
-mataPelajaran(nilaiUn);
-
-
-
-
-
-
-
-
+mataPelajaranValidation(nilaiUn);
