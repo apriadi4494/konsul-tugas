@@ -35,5 +35,6 @@ const biodata = {
     ],
     interestInCoding: true
 }
-    const { name } = biodata.schoolList[2]
+const { name } = biodata.schoolList[2]
+
 console.log(name)
