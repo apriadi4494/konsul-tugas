@@ -1,9 +1,4 @@
-/* 
-    3.	Buatlah program yang memiliki satu variabel dengan nama “printSegitiga” yg berisi tipe data number yang menghasilkan output segitiga terbalik yang berisi angka
-*/
-
-
-let printTriangle = 6
+const printTriangle = 6
 if(Number(printTriangle)){
     let str = "";
     for(let i = printTriangle; i > 0; i--){
@@ -17,17 +12,3 @@ if(Number(printTriangle)){
 }else{
     console.log("Data harus Number")
 }
-
-// let printTriangle = 6;
-
-// if(Number(printTriangle)){
-//     let str = "";
-//     for(let i = printTriangle; i > 0; i--){
-//         for(let j = i; j > 0; j--){
-//             str += j;
-//         }
-//         str += "\n"
-//     }
-//     console.log(str)
-// }
-
