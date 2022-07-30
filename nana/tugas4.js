@@ -1,10 +1,9 @@
-let data = {
+const data = {
     id: 1,
     name: "Leanne Graham",
     username: "Bret",
     email: "Sincere@april.biz",
-    address: 
-        {
+    address: {
             street: "Kulas Light",
             suite: "Apt. 556",
             city: "Gwenborough",
@@ -13,20 +12,8 @@ let data = {
     phone: "1-770-736-8031 x56442",
     website: "hildegard.org",
 }
-
-
-/* 
-    a.	Ubahlah data  tersebut menggunakan spread operator menjadi: 
-        name: nama anda
-        email: email anda
-        hobby: hobi anda
-
-*/
-let data1 = {...data, name: "Nana", email: "yamisukehiro@gmail.com", hobi: "main game"}
+const data1 = {...data, name: "Nana", email: "yamisukehiro2510@gmail.com", hobi: "main game"}
 console.log(data1)
-
-
-// b. Ambilah data “street dan city” tersebut menggunakan destructuring
-const {street, city} = data.address;
+const { street, city } = data.address;
 console.log(street);
 console.log(city)
