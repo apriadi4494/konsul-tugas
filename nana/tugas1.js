@@ -1,18 +1,4 @@
-
-/* 
-    1.	Buat variabel dengan nama biodata dan tipe data object dengan value dan tipe data  sebagai berikut:
-    ●	name (string)
-    ●	age(number)
-    ●	hobbies (array) minimal 3 elements
-    ●	IsMaried (boolean)
-    ●	schoolList (Array of Object) with key name, yearIn, yearOut, and major (if any, if no set “null” ) minimal 3 elements
-    ●	skills (Array of Object) with key skillName and level (beginner, advanced, expert) minimal 2 elements
-    ●	interestInCoding (Boolean)
-*/
-
-
-
-let biodata = {
+const biodata = {
     name: 'Taryana',
     age: 19,
     hobbies: ['nonton anime', 'coding', 'main game'],
@@ -49,7 +35,5 @@ let biodata = {
     ],
     interestInCoding: true
 }
-
-console.log(biodata.schoolList[0].name)
-const {name} = biodata.schoolList[2]
+const { name } = biodata.schoolList[2]
 console.log(name)
