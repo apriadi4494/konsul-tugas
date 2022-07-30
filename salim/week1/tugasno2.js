@@ -1,36 +1,53 @@
+//the main function for checking, validating and printing the result exam 
 
+function mataPelajaran(nilaiUNAS){
+    if(nilaiUNAS.mtk == undefined || nilaiUNAS.bahasaIndonesia == undefined || nilaiUNAS.bahasaInggris == undefined || nilaiUNAS.ipa == undefined)
+    {
+        console.log('Tolong lengkapi nilai');
+        return;
+    }
+    if(typeof(nilaiUNAS.mtk) !== typeof(Number(nilaiUNAS.mtk)) || typeof(nilaiUNAS.bahasaIndonesia) !== typeof(Number(nilaiUNAS.bahasaIndonesia)) || typeof(nilaiUNAS.bahasaInggris) !== typeof(Number(nilaiUNAS.bahasaInggris)) || typeof(nilaiUNAS.ipa) !== typeof(Number(nilaiUNAS.ipa)))
+    {
+        console.log('Tolong hindari memasukkan selain angka');
+        return;
+    }
 
-function matapelajaran(mtk, bahasaIndonesia, bahasaInggris, ipa){
-    if(mtk == undefined || bahasaIndonesia == undefined || bahasaInggris == undefined || ipa == undefined)
-    {
-        console.log("lengkapi nilai");
-    }
-    else if(typeof(mtk) !== typeof(Number(mtk)) || typeof(bahasaIndonesia) !== typeof(Number(bahasaIndonesia)) || typeof(bahasaInggris) !== typeof(Number(bahasaInggris)) || typeof(ipa) !== typeof(Number(ipa)))
-    {
-        console.log("jangan memasukan selain angka");
-    }
-    else{
-        let average = (mtk + bahasaIndonesia + bahasaInggris + ipa) / 4;
-        console.log(`Rata-rata: ${average}`);
-        if(average >= 90 && average <= 100){
-            console.log(`Grade: A`);
-        }
-        else if(average >= 80 && average <= 89){
-            console.log(`Grade: B`);
-        }
-        else if(average >= 70 && average <= 79){
-            console.log(`Grade: C`);
-        }
-        else if(average >= 60 && average <= 69){
-           console.log(`Grade: D`);
-        }
-        else{
-            console.log(`Grade: E`);
-        } 
-    }
+    let hasil = mataPelajaranCalc(nilaiUNAS.mtk, nilaiUNAS.bahasaIndonesia, nilaiUNAS.bahasaInggris, nilaiUNAS.ipa)
+    console.log(hasil);
 }
 
-matapelajaran(60,80,85,100);
+//the funtion for calculating the exam scores
+
+function mataPelajaranCalc(mtk, bahasaIndonesia, bahasaInggris, ipa){
+    let average = (mtk + bahasaIndonesia + bahasaInggris + ipa) / 4;
+
+if(mtk < 0 || bahasaIndonesia < 0 || bahasaInggris <0 || ipa < 0 || mtk > 100 || bahasaIndonesia >100 || bahasaInggris >100 || ipa >100) return `Tolong masukkan setiap nilai hanya dalam interval 0 hingga 100 saja!`;
+
+if(average >= 90 && average <= 100) return `Rata-rata: ${average}
+Grade: A`;
+if(average >= 80 && average <= 89) return `Rata-rata: ${average}
+Grade: B`;
+if(average >= 70 && average <= 79) return `Rata-rata: ${average}
+Grade: C`;
+if(average >= 60 && average <= 69) return `Rata-rata: ${average}
+Grade: D`;
+return `Rata-rata: ${average}
+Grade: E`;     
+}
+
+//the object that act as a parameter receiver
+
+const nilaiUn= {
+    mtk: 100,
+    bahasaIndonesia: 60,
+    bahasaInggris: 90,
+    ipa: 100
+}
+
+//the callback for main function 
+
+mataPelajaran(nilaiUn);
+
 
 
 
