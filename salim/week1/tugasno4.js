@@ -2,6 +2,7 @@
         // name: your name
         // email: your email
         // hobby: your hobby
+
 const data = {
     id: 1,
     name: 'Leanne Graham',
@@ -16,12 +17,14 @@ const data = {
     phone: '1-770-736-8031 x56442',
     website: 'hildegard.org',
 };
+
 const dataMerge = {
     ...data,
     name: 'Abdus Salim',
     hobby: 'learn to code',
     email: 'abdussalimsan@gmail.com',
 };
+
 console.log(dataMerge);
 
 //b. Pick the data “street and city” using destructuring
