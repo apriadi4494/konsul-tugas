@@ -13,7 +13,7 @@ function mataPelajaranValidation(nilaiUNAS){
         console.log('Tolong hindari memasukkan selain angka');
         return;
     }
-    
+
     let result = mataPelajaranCalc(mtk, bahasaIndonesia, bahasaInggris, ipa)
     console.log(result);
 };
@@ -34,9 +34,9 @@ function mataPelajaranCalc(mtk, bahasaIndonesia, bahasaInggris, ipa){
 //the object that act as a parameter receiver
 const nilaiUn= {
     mtk: 30,
-    bahasaIndonesia: ,
-    bahasaInggris: 90,
-    ipa: 100
+    bahasaIndonesia: 30,
+    bahasaInggris: 30,
+    ipa: 30
 };
 
 //the callback for main function 
