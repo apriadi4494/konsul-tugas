@@ -1,4 +1,3 @@
-
 /* 
     2.	Buatlah program searching nama yang dapat dibatasi jumlah outputnya yang 
     menerapkan  callback function dengan data sebagai berikut:
@@ -11,7 +10,6 @@ let names = [
     "Ella", "Faith", "Olivia", "Penelope"
 ]
   function search(str,num, callback) {
-      
       try{
           validasiInput(str)
           validasiNum(num)
@@ -45,4 +43,4 @@ let names = [
     console.log(result)
   }
 
-  search('^%', 6, tampilkanHasil);
+  search('en', 6, tampilkanHasil);
