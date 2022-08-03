@@ -1,4 +1,4 @@
-let data = {
+const data = {
     id: 1,
     name: 'Leanne Graham',
     username: 'Bret',
@@ -14,7 +14,7 @@ let data = {
     website: 'hildegard.org',
 }
 
-let data1 = {
+const data1 = {
     ...data, 
     name: 'Nana', 
     email: 'yamisukehiro@gmail.com', 
@@ -24,6 +24,6 @@ let data1 = {
 console.log(data1)
 
 // b. Ambilah data “street dan city” tersebut menggunakan destructuring
-const {street, city} = data.address
+const { street, city } = data.address
 
 console.log(`${street} \n${city}`);
