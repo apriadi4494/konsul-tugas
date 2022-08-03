@@ -1,4 +1,4 @@
-const waktu = new Date();
+// const waktu = new Date();
 
 // //sebelum kita dapat memanggil fungsi dibawah, kita harus deklarasikan dulu new Date() dalam sebuah variabel, dalam kasus ini saya mengambil nama variabel 'const waktu'
 
