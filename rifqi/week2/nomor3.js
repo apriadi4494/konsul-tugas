@@ -1,15 +1,15 @@
 const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
   try {
-    if (nilaiAwal > nilaiAkhir)
-      throw "Nilai akhir harus lebih besar dari nilai awal";
-    if (dataArray.length < 5)
-      throw "Jumlah angka dalam dataArray harus lebih dari 5";
+    if (nilaiAwal > nilaiAkhir) throw "Nilai akhir harus lebih besar dari nilai awal";
+    if (dataArray.length < 5) throw "Jumlah angka dalam dataArray harus lebih dari 5";
 
-    let result = dataArray.filter(function (n) {
+    const result = dataArray.filter(function (n) {
       return n > nilaiAwal && n < nilaiAkhir;
     });
-    let data = result.sort((a, b) => a - b);
+    
+    const data = result.sort((a, b) => a - b);
     if (!data.length) throw "Data tidak ditemukan";
+    
     console.log(data);
   } catch (error) {
     console.log(error);
